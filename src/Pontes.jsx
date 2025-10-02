@@ -87,7 +87,7 @@ function Pontes() {
     }
 
     return (
-        <div className='pontes' onClick={handleClick}>
+        <div className='pontes'>
 
             <div className='pesos'>
                 {linhas.map((linha, index) => (
@@ -106,7 +106,7 @@ function Pontes() {
                     <h3>{dados.peso}</h3>
                 </div>
                 <div className='contagem'>
-                    <div className='circulo'>
+                    <div className='circulo' onClick={handleClick}>
                         <h2>{contador}</h2>
                     </div>
                 </div>
