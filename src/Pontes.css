@@ -153,19 +153,14 @@ table {
 
 .pesos {
     justify-content: flex-end;
-    margin-bottom: 5vh;
-    margin-left: 2vh;
+    margin-bottom: 35px;
 }
 
 .linhas {
     display: flex;
     justify-content: center;
     flex-direction: column;
-<<<<<<< HEAD
-    margin-top: 1vh;
-=======
     margin: 2vh 4vh;
->>>>>>> 5bf3bdaafaf45379d7264cf44c70e74526a66a47
 }
 
 .linha {
@@ -174,22 +169,12 @@ table {
 
 .caixa {
   background: #006494;
-<<<<<<< HEAD
-  font-size: 2.1vh;
-  color: #fff;
-  box-shadow: rgba(0,0,0,.1) 0 0.6vh 1.6vh;
-  font-family: "Lexend Deca", sans-serif;
-  width: 20vh;
-  height: 5vh;
-  margin-right: 1vh;
-=======
   color: #fff;
   box-shadow: rgba(0,0,0,.1) 0 0.6vh 1.6vh;
   font-family: "Lexend Deca", sans-serif;
   width: 18vh;
   height: 3vh;
   margin: 0vh 0.3vh -5vh;
->>>>>>> 5bf3bdaafaf45379d7264cf44c70e74526a66a47
   border-radius: 0.5vh;
   display: flex;
   justify-content: center;
@@ -206,10 +191,12 @@ table {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  font-size: 2.2vh;
 }
 
 #tipo {
   background: #041F64;
+  font-size: 1.6vh;
   white-space: nowrap;
 }
 
