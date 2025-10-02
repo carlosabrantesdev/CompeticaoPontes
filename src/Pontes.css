@@ -160,7 +160,7 @@ table {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 3vh 4vh;
+    margin: 2vh 4vh;
 }
 
 .linha {
@@ -169,13 +169,12 @@ table {
 
 .caixa {
   background: #006494;
-  font-size: 1.7vh;
   color: #fff;
   box-shadow: rgba(0,0,0,.1) 0 0.6vh 1.6vh;
   font-family: "Lexend Deca", sans-serif;
-  width: 20vh;
-  height: 5vh;
-  margin: 0 0.3vh -5vh;
+  width: 18vh;
+  height: 3vh;
+  margin: 0vh 0.3vh -5vh;
   border-radius: 0.5vh;
   display: flex;
   justify-content: center;

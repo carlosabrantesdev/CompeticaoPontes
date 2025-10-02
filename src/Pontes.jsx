@@ -4,18 +4,32 @@ import Linhas from './components/Linhas'
 
 function Pontes() {
     const [linhas] = useState([
-        { "tipo": "RECORD", "kilo": "12KG", "kilorecorde": "215KG" },
-        { "kilo": "12KG" },
-        { "kilo": "12KG" },
-        { "kilo": "12KG" },
-        { "tipo": "RECORD DAY", "kilo": "12KG", "kilorecorde": "200KG" },
-        { "kilo": "12KG" },
-        { "kilo": "12KG" },
-        { "kilo": "12KG" },
-        { "kilo": "12KG" },
-        { "kilo": "12KG" },
-        { "tipo": "PROXIMA CARGA", "kilo": "12KG" },
-        { "tipo": "CARGA ATUAL", "kilo": "0KG" }
+        
+        { "ordem": "24º", "kilo": "10KG" },
+        { "ordem": "23º", "kilo": "10KG" },
+        { "ordem": "22º", "kilo": "10KG" },
+        { "ordem": "21º", "kilo": "10KG" },
+        { "ordem": "20º", "kilo": "10KG" },
+        { "ordem": "19º", "kilo": "10KG" },
+        { "ordem": "18º", "kilo": "10KG" },
+        { "ordem": "17º", "kilo": "10KG" },
+        { "ordem": "16º", "kilo": "10KG" },
+        { "ordem": "15º", "kilo": "5KG" },
+        { "ordem": "14º", "kilo": "5KG" },
+        { "ordem": "13º", "kilo": "5KG" },
+        { "ordem": "12º", "kilo": "10KG" },
+        { "ordem": "11º", "kilo": "10KG" },
+        { "ordem": "10º", "kilo": "10KG" },
+        { "ordem": "9º", "kilo": "5KG" },
+        { "ordem": "8º", "kilo": "5KG" },
+        { "ordem": "7º", "kilo": "5KG" },
+        { "ordem": "6º", "kilo": "10KG" },
+        { "ordem": "5º", "kilo": "10KG" },
+        { "ordem": "4º", "kilo": "10KG" },
+        { "ordem": "3º", "kilo": "5KG" },
+        { "ordem": "2º", "kilo": "5KG" },
+        { "ordem": "1º", "kilo": "5KG" }
+        
     ])
 
     const [contador, setContador] = useState(10)
