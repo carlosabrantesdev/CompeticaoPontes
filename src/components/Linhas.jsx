@@ -5,25 +5,30 @@ function Linhas(props) {
     return (
         <div className='linhas'>
             <div className='linha'>
-                <div
-                    className={`caixa ${!props.tipo ? 'vazio' : ''}`}
-                    id={props.tipo ? 'tipo' : undefined}
-                >
-                    <p>{props.tipo || ''}</p>
+                <div className='esquerda'>
+                    {props.tipo && (
+                        <div className="caixa" id="tipo">
+                            <p>{props.tipo}</p>
+                        </div>
+                    )}
                 </div>
-
-                <div
-                    className={`caixa ${!props.kilo ? 'vazio' : ''}`}
-                    id={props.kilo ? 'kilo' : undefined}
-                >
-                    <p>{props.kilo || ''}</p>
+                <div className='meio'>
+                    {props.kilo && (
+                        <div
+                            className="caixa"
+                            id="kilo"
+                            style={props.kilo === '5KG' ? { width: "13vh" } : { width: "18vh" }}
+                        >
+                            <p>{props.kilo}</p>
+                        </div>
+                    )}
                 </div>
-
-                <div
-                    className={`caixa ${!props.kilorecorde ? 'vazio' : ''}`}
-                    id={props.kilorecorde ? 'kilorecorde' : undefined}
-                >
-                    <p>{props.kilorecorde || ''}</p>
+                <div className='direita'>
+                    {props.kilorecorde && (
+                        <div className="caixa" id="kilorecorde">
+                            <p>{props.kilorecorde}</p>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

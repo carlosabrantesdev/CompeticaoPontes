@@ -167,6 +167,13 @@ table {
     display: flex;
 }
 
+.esquerda, .meio, .direita {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .caixa {
   background: #006494;
   color: #fff;
@@ -198,12 +205,6 @@ table {
   background: #041F64;
   font-size: 1.6vh;
   white-space: nowrap;
-}
-
-
-.caixa.vazio {
-    background: none;
-    box-shadow: none;
 }
 
 /* Principal */
