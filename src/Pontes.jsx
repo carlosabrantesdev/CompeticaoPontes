@@ -35,6 +35,7 @@ function Pontes() {
     const [contador, setContador] = useState(10)
     const [ativo, setAtivo] = useState(false)
     const [startTime, setStartTime] = useState(null)
+    const [equipe, setEquipe] = useState("Carregando")
 
     const [dados, setDados] = useState({
         equipe: "Carregando",
@@ -44,11 +45,10 @@ function Pontes() {
     })
 
     useEffect(() => {
-        fetch("https://mockapi.io/exemplo/pontes/1")
+        fetch("https://exemploDeAPI/exemplo/pontes/1")
             .then(res => res.json())
             .then(data => {
                 setDados({
-                    equipe: data.equipe || "Equipe X",
                     peso: data.peso || "0KG",
                     cargaEstimada: data.cargaEstimada || "0KG",
                     proximaCarga: data.proximaCarga || "0KG"
@@ -83,6 +83,8 @@ function Pontes() {
             setStartTime(Date.now())
             setContador(10)
             setAtivo(true)
+        } else {
+            setAtivo(false)
         }
     }
 
@@ -102,7 +104,7 @@ function Pontes() {
 
             <div className='principal'>
                 <div className='equipe'>
-                    <h2>{dados.equipe}</h2>
+                    <h2>{equipe}</h2>
                     <h3>{dados.peso}</h3>
                 </div>
                 <div className='contagem'>
@@ -111,7 +113,7 @@ function Pontes() {
                     </div>
                 </div>
                 <div className='status'>
-                    <h3>{ativo ? "Contando" : "Contador"}</h3>
+                    <h3>{ativo ? "Contando..." : "Contador"}</h3>
                 </div>
             </div>
 
