@@ -18,7 +18,7 @@ function Pontes() {
         { "ordem": "12", "kilo": "10KG" },
         { "ordem": "11", "kilo": "10KG" },
         { "ordem": "10", "kilo": "10KG" },
-        { "ordem": "9", "kilo": "5KG",},
+        { "ordem": "9", "kilo": "5KG", },
         { "ordem": "8", "kilo": "5KG" },
         { "ordem": "7", "kilo": "5KG" },
         { "ordem": "6", "kilo": "10KG" },
@@ -27,12 +27,11 @@ function Pontes() {
         { "ordem": "3", "kilo": "5KG" },
         { "ordem": "2", "kilo": "5KG" },
         { "ordem": "1", "kilo": "5KG" },
-        { "tipo": "teste", "ordem": "24", "kilo": "10KG", "kilorecorde": "15KG" },
+        { "tipo": "teste", "ordem": "0", "kilo": "11KG", "kilorecorde": "15KG" },
     ])
 
     const [contador, setContador] = useState(10)
     const [ativo, setAtivo] = useState(false)
-    const [startTime, setStartTime] = useState(null)
     const [equipe, setEquipe] = useState("Carregando")
 
     const [dados, setDados] = useState({
@@ -58,27 +57,25 @@ function Pontes() {
     }, [])
 
     useEffect(() => {
-        let intervalo
-        if (ativo && startTime) {
-            intervalo = setInterval(() => {
-                const agora = Date.now()
-                const segundosPassados = Math.floor((agora - startTime) / 1000)
-                const novoValor = Math.max(10 - segundosPassados, 0)
-                setContador(novoValor)
+        let intervalo;
 
-                if (novoValor === 0) {
-                    setAtivo(false)
-                    setContador(10)
-                }
-            }, 100)
+        if (ativo) {
+            intervalo = setInterval(() => {
+                setContador((prev) => {
+                    if (prev <= 1) {
+                        setAtivo(false);
+                        return 10;
+                    }
+                    return prev - .1;
+                });
+            }, 100);
         }
 
-        return () => clearInterval(intervalo)
-    }, [ativo, startTime])
+        return () => clearInterval(intervalo);
+    }, [ativo]);
 
     const handleClick = () => {
         if (!ativo) {
-            setStartTime(Date.now())
             setContador(10)
             setAtivo(true)
         } else {
@@ -107,7 +104,7 @@ function Pontes() {
                 </div>
                 <div className='contagem'>
                     <div className='circulo' onClick={handleClick}>
-                        <h2>{contador}</h2>
+                        <h2>{contador.toFixed(1)}</h2>
                     </div>
                 </div>
                 <div className='status'>
